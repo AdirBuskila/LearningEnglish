@@ -7,7 +7,7 @@ import { PracticePage } from './pages/practice-page';
 
 export const routes = [
   {
-    path: '/',
+    path: '/LearningEnglish',
     element: <LoginPage />,
   },
   {
