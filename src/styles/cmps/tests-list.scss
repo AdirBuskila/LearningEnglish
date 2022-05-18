@@ -1,0 +1,27 @@
+.tests-list-container {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: repeat(15, 100px);
+  grid-auto-flow: row;
+  column-gap: 10px;
+  justify-content: center;
+  row-gap: 15px;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  .test-preview-container {
+    background-color: #efefef;
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    &.done {
+      background: #00ffab;
+    }
+    p {
+      font-weight: bold;
+      font-size: 26px;
+    }
+  }
+}

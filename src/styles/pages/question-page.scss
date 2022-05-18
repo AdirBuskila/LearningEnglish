@@ -1,0 +1,17 @@
+.question-container {
+  .question-title {
+    padding: 20px;
+  }
+  .question-img {
+    width: 180px;
+  }
+  .form-container {
+    padding-top: 20px;
+    gap: 10px;
+    .answer-input {
+      height: 30px;
+    }
+    .submit-btn {
+    }
+  }
+}

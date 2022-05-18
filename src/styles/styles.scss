@@ -1,0 +1,22 @@
+// Setup
+@import 'setup/typography.scss';
+@import 'setup/variables.scss';
+@import 'setup/functions.scss';
+// @import "setup/mixins.scss";
+// Basics
+@import 'basics/helpers.scss';
+// @import "basics/layout.scss";
+@import 'basics/base.scss';
+// Pages
+@import 'pages/login-page.scss';
+@import 'pages/home-page.scss';
+@import 'pages/question-page.scss';
+
+// Components
+@import 'cmps/tests-list.scss';
+@import 'cmps/app-header.scss';
+@import 'cmps/user-msg.scss';
+
+// General
+
+// Sub cmps
