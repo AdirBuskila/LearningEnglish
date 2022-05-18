@@ -11,6 +11,7 @@ import hamster from '../assets/img/hamster.jpg';
 import animalsBg from '../assets/img/animals-bg.jpg';
 import numbersBg from '../assets/img/numbers-bg.png';
 import grammarBg from '../assets/img/grammar-bg.jpg';
+import colorsBg from '../assets/img/colors-bg.png';
 
 const animals = {
   type: 'animals',
@@ -88,6 +89,102 @@ const animals = {
         answer: 'hamster',
         doneBy: [],
         img: hamster,
+      },
+    ],
+  ],
+};
+const colors = {
+  type: 'colors',
+  img: colorsBg,
+  tests: [
+    [
+      {
+        _id: 0,
+        ques: 'Name of the color?',
+        answer: 'red',
+        doneBy: [],
+        color: '',
+      },
+      {
+        _id: 1,
+        ques: 'Name of the color?',
+        answer: 'blue',
+        doneBy: [],
+        color: '',
+      },
+      {
+        _id: 2,
+        ques: 'Name of the color?',
+        answer: 'green',
+        doneBy: [],
+        color: '',
+      },
+      {
+        _id: 3,
+        ques: 'Name of the color?',
+        answer: 'white',
+        doneBy: [],
+        color: '',
+      },
+      {
+        _id: 4,
+        ques: 'Name of the color?',
+        answer: 'yellow',
+        doneBy: [],
+        color: '',
+      },
+    ],
+    [
+      {
+        _id: 5,
+        ques: 'Name of the color?',
+        answer: 'orange',
+        doneBy: [],
+        color: '',
+      },
+      {
+        _id: 6,
+        ques: 'Name of the color?',
+        answer: 'purple',
+        doneBy: [],
+        color: '',
+      },
+      {
+        _id: 7,
+        ques: 'Name of the color?',
+        answer: 'black',
+        doneBy: [],
+        color: '',
+      },
+      {
+        _id: 8,
+        ques: 'Name of the color?',
+        answer: 'grey',
+        doneBy: [],
+        color: '',
+      },
+      {
+        _id: 9,
+        ques: 'Name of the color?',
+        answer: 'pink',
+        doneBy: [],
+        color: '',
+      },
+    ],
+    [
+      {
+        _id: 10,
+        ques: 'Name of the color?',
+        answer: 'brown',
+        doneBy: [],
+        color: '',
+      },
+      {
+        _id: 11,
+        ques: 'Name of the color?',
+        answer: 'cyan',
+        doneBy: [],
+        color: '',
       },
     ],
   ],
@@ -1062,8 +1159,57 @@ const grammar = {
   ],
 };
 
-export const categories = [animals, numbers, practice, grammar];
+export const categories = [animals, grammar, numbers, colors, practice];
 
 export const checkIfDone = (username, test) => {
   return test.every((t) => t.doneBy.includes(username));
 };
+
+export const MarkTestArr = (testArr, username) => {
+  let newArr = [];
+  return testArr.map((item) => ({
+    ...item,
+    doneBy: [...item.doneBy, username],
+  }));
+};
+
+MarkTestArr(
+  [
+    {
+      _id: 0,
+      ques: 'How am I called?',
+      answer: 'dog',
+      doneBy: [],
+      img: dog,
+    },
+    {
+      _id: 1,
+      ques: 'How am I called?',
+      answer: 'tiger',
+      doneBy: [],
+      img: tiger,
+    },
+    {
+      _id: 2,
+      ques: 'How am I called?',
+      answer: 'lion',
+      doneBy: [],
+      img: lion,
+    },
+    {
+      _id: 3,
+      ques: 'How am I called?',
+      answer: 'fish',
+      doneBy: [],
+      img: fish,
+    },
+    {
+      _id: 4,
+      ques: 'How am I called?',
+      answer: 'cat',
+      doneBy: [],
+      img: cat,
+    },
+  ],
+  'Adir Buskila'
+);

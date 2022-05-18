@@ -1,24 +1,24 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { clearMsg, setMsg } from '../store/userMsgSlice';
-import { useNavigate } from 'react-router';
-import { setTestArr } from '../store/englishSlice';
+import { saveTest, setTestArr } from '../store/englishSlice';
 import { utilService } from '../services/util.service';
+import { MarkTestArr } from '../services/learn.service';
 
 export const QuestionPage = () => {
   const dispatch = useDispatch();
   const testArr = useSelector((state) => state.english.testArr);
   const category = useSelector((state) => state.english.category);
-
-  const navigate = useNavigate();
+  const student = useSelector((state) => state.english.student);
+  const inputRef = useRef(null);
 
   const [curQues, setCurQues] = useState(null);
-  const [QuesIdx, setQuesIdx] = useState(0);
+  const [QuesIdx, setQuesIdx] = useState(4);
 
   useEffect(() => {
     setCurQues(testArr[QuesIdx]);
-    console.log('curQues :>> ', curQues);
-  });
+    if (inputRef.current) inputRef.current.focus();
+  }, [QuesIdx]);
 
   const getAnswer = (e) => {
     e.preventDefault();
@@ -36,6 +36,9 @@ export const QuestionPage = () => {
   const rightAnswer = () => {
     const isFinal = QuesIdx + 1 === testArr.length ? true : false;
     if (isFinal) {
+      const newTestArr = MarkTestArr(testArr, student.fullName);
+      console.log('newTestArr :>> ', newTestArr);
+      dispatch(saveTest());
       dispatch(
         setMsg({
           txt: '💪 Another test completed! 💪',
@@ -74,7 +77,13 @@ export const QuestionPage = () => {
         className='form-container flex column'
         onSubmit={(e) => getAnswer(e)}
       >
-        <input className='answer-input' type='text' />
+        <input
+          name='answer'
+          id='answer'
+          ref={inputRef}
+          className='answer-input'
+          type='text'
+        />
         <button className='submit-btn button-21'>Enter</button>
       </form>
     </div>

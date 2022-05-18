@@ -18,7 +18,7 @@ export const CategoryPreview = (props) => {
     // };
     const style = {
       backgroundImage: `url(${cat.img})`,
-      backgroundSize: 'contain',
+      backgroundSize: 'cover',
     };
     return style;
   };

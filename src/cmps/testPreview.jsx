@@ -9,8 +9,8 @@ export const TestPreview = (props) => {
 
   const testClass = (test) => {
     return checkIfDone(student.fullName, test)
-      ? 'test-preview-container done flex'
-      : 'test-preview-container flex';
+      ? 'test-preview-container pointer done flex'
+      : 'test-preview-container pointer flex';
   };
 
   const { test, idx } = props;

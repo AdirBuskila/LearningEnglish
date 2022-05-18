@@ -13,7 +13,17 @@ export const englishSlice = createSlice({
   reducers: {
     setData: (state) => {
       state.data = categories;
-
+      console.log(state.data);
+    },
+    saveTest: (state, action) => {
+      // category
+      console.log('state.category :>> ', state.category);
+      console.log('state.000 :>> ', state.data[0].type);
+      let category = state.data.findIndex((c) => c.type === state.category);
+      console.log(
+        'state.data.indexOf(category) :>> ',
+        state.data.indexOf(category)
+      );
       console.log(state.data);
     },
     setCategory: (state, action) => {
@@ -34,7 +44,7 @@ export const englishSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { setStudent, setData, setCategory, setTestArr } =
+export const { setStudent, setData, setCategory, setTestArr, saveTest } =
   englishSlice.actions;
 
 export default englishSlice.reducer;
