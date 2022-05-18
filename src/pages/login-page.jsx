@@ -27,10 +27,10 @@ export const LoginPage = () => {
   const onLogin = (e) => {
     e.preventDefault();
     const value = +e.nativeEvent.target[0].value;
-    if (value === user1.id) {
-      dispatch(setStudent(user1));
-      navigate('/home');
-    }
+    // if (value === user1.id) {
+    dispatch(setStudent(user1));
+    navigate('/home');
+    // }
   };
 
   return (
