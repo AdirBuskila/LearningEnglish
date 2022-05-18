@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 export const userMsgSlice = createSlice({
   name: 'counter',
   initialState: {
-    msg: { txt: '💪 Another test completed! 💪', msgClass: 'party party-1' },
+    msg: null,
   },
   reducers: {
     setMsg: (state, action) => {
