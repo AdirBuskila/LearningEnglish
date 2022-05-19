@@ -11,6 +11,12 @@ export const LoginPage = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    if (user.scores) {
+      localStorage.clear();
+      dispatch(setStudent(user));
+      navigate('/home');
+      console.log('CLEARING!!!!!');
+    }
     if (user && !student) {
       dispatch(setStudent(user));
       console.log('loaded from storage');
@@ -21,7 +27,8 @@ export const LoginPage = () => {
   const user1 = {
     fullName: 'Adir Buskila',
     id: 209,
-    completedTests: [],
+    scores: [],
+    // completedTests: [],
   };
 
   const onLogin = (e) => {
