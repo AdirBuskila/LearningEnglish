@@ -11,12 +11,6 @@ export const LoginPage = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (user.scores) {
-      localStorage.clear();
-      dispatch(setStudent(user));
-      navigate('/home');
-      console.log('CLEARING!!!!!');
-    }
     if (user && !student) {
       dispatch(setStudent(user));
       console.log('loaded from storage');
