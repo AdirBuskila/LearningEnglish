@@ -15,16 +15,14 @@ export const englishSlice = createSlice({
       state.data = categories;
       console.log(state.data);
     },
-    saveTest: (state, action) => {
+    testCompleted: (state, action) => {
+      if (!state.student.completedTests.includes(action.payload)) {
+        state.student.completedTests.push(action.payload);
+        pathToStorage.saveToStorage('student', state.student);
+        console.log('state.student :>> ', state.student);
+      }
+      console.log();
       // category
-      console.log('state.category :>> ', state.category);
-      console.log('state.000 :>> ', state.data[0].type);
-      let category = state.data.findIndex((c) => c.type === state.category);
-      console.log(
-        'state.data.indexOf(category) :>> ',
-        state.data.indexOf(category)
-      );
-      console.log(state.data);
     },
     setCategory: (state, action) => {
       state.category = state.data.filter(
@@ -44,7 +42,13 @@ export const englishSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { setStudent, setData, setCategory, setTestArr, saveTest } =
-  englishSlice.actions;
+export const {
+  setStudent,
+  setData,
+  setCategory,
+  setTestArr,
+  saveTest,
+  testCompleted,
+} = englishSlice.actions;
 
 export default englishSlice.reducer;

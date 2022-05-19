@@ -21,7 +21,7 @@ export const LoginPage = () => {
   const user1 = {
     fullName: 'Adir Buskila',
     id: 209,
-    scores: [],
+    completedTests: [],
   };
 
   const onLogin = (e) => {

@@ -1,9 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState, useRef } from 'react';
 import { clearMsg, setMsg } from '../store/userMsgSlice';
-import { saveTest, setTestArr } from '../store/englishSlice';
+import { setTestArr, testCompleted } from '../store/englishSlice';
 import { utilService } from '../services/util.service';
-import { MarkTestArr } from '../services/learn.service';
 
 export const QuestionPage = () => {
   const dispatch = useDispatch();
@@ -13,7 +12,7 @@ export const QuestionPage = () => {
   const inputRef = useRef(null);
 
   const [curQues, setCurQues] = useState(null);
-  const [QuesIdx, setQuesIdx] = useState(4);
+  const [QuesIdx, setQuesIdx] = useState(0);
 
   useEffect(() => {
     setCurQues(testArr[QuesIdx]);
@@ -36,9 +35,7 @@ export const QuestionPage = () => {
   const rightAnswer = () => {
     const isFinal = QuesIdx + 1 === testArr.length ? true : false;
     if (isFinal) {
-      const newTestArr = MarkTestArr(testArr, student.fullName);
-      console.log('newTestArr :>> ', newTestArr);
-      dispatch(saveTest());
+      dispatch(testCompleted(curQues._id));
       dispatch(
         setMsg({
           txt: '💪 Another test completed! 💪',
@@ -51,6 +48,7 @@ export const QuestionPage = () => {
       }, 2500);
     } else {
       dispatch(setMsg({ txt: '🤩 You are correct! 🤩', msgClass: 'success' }));
+      dispatch(testCompleted(curQues._id));
       setTimeout(() => {
         dispatch(clearMsg());
         setQuesIdx(QuesIdx + 1);
@@ -72,6 +70,9 @@ export const QuestionPage = () => {
       <h2 className='question-title'>{ques}</h2>
       {curQues.img && (
         <img className='question-img' src={curQues.img} alt='img' />
+      )}
+      {curQues.color && (
+        <div style={{ backgroundColor: curQues.color }} className='color'></div>
       )}
       <form
         className='form-container flex column'

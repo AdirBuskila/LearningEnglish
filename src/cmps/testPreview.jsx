@@ -8,7 +8,7 @@ export const TestPreview = (props) => {
   const dispatch = useDispatch();
 
   const testClass = (test) => {
-    return checkIfDone(student.fullName, test)
+    return checkIfDone(student, test)
       ? 'test-preview-container pointer done flex'
       : 'test-preview-container pointer flex';
   };
