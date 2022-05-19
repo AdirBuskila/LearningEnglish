@@ -1,32 +1,22 @@
 {
   "files": {
-    "main.css": "/LearningEnglish/static/css/main.205b1b7e.css",
-    "main.js": "/LearningEnglish/static/js/main.cb5147f3.js",
-    "static/media/bird.png": "/LearningEnglish/static/media/bird.0a0a598f29cc2c582e0a.png",
+    "main.css": "/LearningEnglish/static/css/main.e3deceb7.css",
+    "main.js": "/LearningEnglish/static/js/main.302d716b.js",
     "static/media/party3.gif": "/LearningEnglish/static/media/party3.7c62cf526f911be98072.gif",
     "static/media/colors-bg.png": "/LearningEnglish/static/media/colors-bg.2127ed3686b3e8d0e77f.png",
     "static/media/party1.gif": "/LearningEnglish/static/media/party1.f90e61a875a2fbc1045b.gif",
     "static/media/party2.gif": "/LearningEnglish/static/media/party2.89113a4024ed30efb48b.gif",
-    "static/media/elephant.jpg": "/LearningEnglish/static/media/elephant.eda9dad95a2fb2fb995e.jpg",
     "static/media/numbers-bg.png": "/LearningEnglish/static/media/numbers-bg.0249f0a6bde47529d350.png",
     "static/media/bg.jpg": "/LearningEnglish/static/media/bg.4c7eb29cae1c5eb53884.jpg",
-    "static/media/dog.jpg": "/LearningEnglish/static/media/dog.82c0e46a1f045c35e8dd.jpg",
-    "static/media/whale.jpg": "/LearningEnglish/static/media/whale.1ea7c660bc498c6d5820.jpg",
-    "static/media/cat.jpg": "/LearningEnglish/static/media/cat.f069e7b23e683b1c646d.jpg",
     "static/media/animals-bg.jpg": "/LearningEnglish/static/media/animals-bg.9e037b294b845d260218.jpg",
-    "static/media/hamster.jpg": "/LearningEnglish/static/media/hamster.c7cafe1a0888d4cd6888.jpg",
-    "static/media/lion.jpg": "/LearningEnglish/static/media/lion.0ada5ef9e600c04e9160.jpg",
     "static/media/grammar-bg.jpg": "/LearningEnglish/static/media/grammar-bg.880ade6b0caa9521dbbc.jpg",
-    "static/media/tiger.jpg": "/LearningEnglish/static/media/tiger.dc2db5573b7af66f51fa.jpg",
-    "static/media/snake.jpg": "/LearningEnglish/static/media/snake.9600dfebbcbe2923748e.jpg",
-    "static/media/fish.jpg": "/LearningEnglish/static/media/fish.874566c2304562e84319.jpg",
     "static/media/logo.png": "/LearningEnglish/static/media/logo.46edcc43ffba6ee2026b.png",
     "index.html": "/LearningEnglish/index.html",
-    "main.205b1b7e.css.map": "/LearningEnglish/static/css/main.205b1b7e.css.map",
-    "main.cb5147f3.js.map": "/LearningEnglish/static/js/main.cb5147f3.js.map"
+    "main.e3deceb7.css.map": "/LearningEnglish/static/css/main.e3deceb7.css.map",
+    "main.302d716b.js.map": "/LearningEnglish/static/js/main.302d716b.js.map"
   },
   "entrypoints": [
-    "static/css/main.205b1b7e.css",
-    "static/js/main.cb5147f3.js"
+    "static/css/main.e3deceb7.css",
+    "static/js/main.302d716b.js"
   ]
 }
