@@ -17,6 +17,14 @@ export const HomePage = () => {
     if (!data) dispatch(setData());
     if (testArr) dispatch(setTestArr(null));
     if (user && !student) dispatch(setStudent(user));
+    if (user.scores) {
+      pathToStorage.saveToStorage('student', {
+        fullName: 'Adir Buskila',
+        id: 209,
+        completedTests: [],
+      });
+      dispatch(setStudent(pathToStorage.loadFromStorage('student')));
+    }
   });
 
   if (!data) return <></>;

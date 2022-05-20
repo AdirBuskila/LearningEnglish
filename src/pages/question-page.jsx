@@ -39,7 +39,7 @@ export const QuestionPage = () => {
       dispatch(
         setMsg({
           txt: '💪 Another test completed! 💪',
-          msgClass: `party party-${utilService.getRandomIntInclusive(1, 3)}`,
+          msgClass: `party party-${utilService.getRandomIntInclusive(1, 5)}`,
         })
       );
       setTimeout(() => {
@@ -81,6 +81,7 @@ export const QuestionPage = () => {
         <input
           name='answer'
           id='answer'
+          autoComplete='off'
           ref={inputRef}
           className='answer-input'
           type='text'

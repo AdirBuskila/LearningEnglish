@@ -1156,5 +1156,8 @@ const grammar = {
 export const categories = [animals, grammar, numbers, colors, practice];
 
 export const checkIfDone = (user, test) => {
-  return test.every((t) => user.completedTests.includes(t._id));
+  let newUser = user?.completedTests
+    ? user
+    : { fullName: user.fullName, completedTests: [] };
+  return test.every((t) => newUser.completedTests.includes(t._id));
 };
