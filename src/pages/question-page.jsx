@@ -22,7 +22,6 @@ export const QuestionPage = () => {
   const getAnswer = (e) => {
     e.preventDefault();
     const ans = e.target[0].value.trim().toLowerCase();
-    console.log('ans :>> ', ans);
     if (ans === curQues.answer) {
       e.target[0].value = '';
       rightAnswer();
@@ -45,7 +44,7 @@ export const QuestionPage = () => {
       setTimeout(() => {
         dispatch(clearMsg());
         dispatch(setTestArr(null));
-      }, 2500);
+      }, 3000);
     } else {
       dispatch(setMsg({ txt: '🤩 You are correct! 🤩', msgClass: 'success' }));
       dispatch(testCompleted(curQues._id));
@@ -67,7 +66,7 @@ export const QuestionPage = () => {
   const { ques } = curQues;
   return (
     <div className='question-container flex column align-center'>
-      <h2 className='question-title'>{ques}</h2>
+      <h1 className='question-title'>{ques}</h1>
       {curQues.img && (
         <img className='question-img' src={curQues.img} alt='img' />
       )}
@@ -82,6 +81,7 @@ export const QuestionPage = () => {
           name='answer'
           id='answer'
           autoComplete='off'
+          placeholder='Answer here...'
           ref={inputRef}
           className='answer-input'
           type='text'

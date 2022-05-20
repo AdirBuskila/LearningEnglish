@@ -13,7 +13,6 @@ export const LoginPage = () => {
   useEffect(() => {
     if (user && !student) {
       dispatch(setStudent(user));
-      console.log('loaded from storage');
       navigate('/home');
     }
   });

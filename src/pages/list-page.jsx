@@ -17,13 +17,14 @@ export const ListPage = () => {
   useEffect(() => {
     if (!data) dispatch(setData());
     dispatch(setCategory(type));
-    console.log('category :>> ', category);
   });
 
   if (!category) return <></>;
   return (
-    <section className='animals-page flex column align-center'>
-      <h1>{utilService.UpperCase(category.type)} Tests</h1>
+    <section className='list-page flex column align-center'>
+      <div className='list-title-container'>
+        <h1>{utilService.UpperCase(category.type)} Tests</h1>
+      </div>
       {!testArr && <TestsList />}
       {testArr && <QuestionPage />}
     </section>

@@ -23,7 +23,7 @@
       background-color: rgb(174, 238, 147);
     }
     &.party {
-      height: 160px;
+      height: 180px;
       background-size: cover;
     }
     &.party-1 {
@@ -40,6 +40,9 @@
     }
     &.party-5 {
       background-image: url('../../assets/img/party5.gif');
+    }
+    &.party-6 {
+      background-image: url('../../assets/img/party6.gif');
     }
     p {
       font-size: 18px;

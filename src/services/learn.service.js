@@ -2,6 +2,7 @@ import animalsBg from '../assets/img/animals-bg.jpg';
 import numbersBg from '../assets/img/numbers-bg.png';
 import grammarBg from '../assets/img/grammar-bg.jpg';
 import colorsBg from '../assets/img/colors-bg.png';
+import countriesBg from '../assets/img/countries-bg.jpg';
 
 const animals = {
   type: 'animals',
@@ -204,7 +205,7 @@ const animals = {
         _id: 'anml-30',
         ques: 'How am I called?',
         answer: 'ostrich',
-        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1652978369/English/animals/pyeh1ovzpzszt85uvodt.png',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1652978386/English/animals/hv6p2mfftarh6uxc2bj6.png',
       },
       {
         _id: 'anml-31',
@@ -313,6 +314,108 @@ const colors = {
         ques: 'Name of the color?',
         answer: 'cyan',
         color: '',
+      },
+    ],
+  ],
+};
+const countries = {
+  type: 'countries',
+  img: countriesBg,
+  tests: [
+    [
+      {
+        _id: 'coun-0',
+        ques: 'Name of the country?',
+        answer: 'israel',
+        img: 'https://flagcdn.com/il.svg',
+      },
+      {
+        _id: 'coun-1',
+        ques: 'Name of the country?',
+        answer: 'spain',
+        img: 'https://flagcdn.com/es.svg',
+      },
+      {
+        _id: 'coun-2',
+        ques: 'Name of the country?',
+        answer: 'brazil',
+        img: 'https://flagcdn.com/br.svg',
+      },
+      {
+        _id: 'coun-3',
+        ques: 'Name of the country?',
+        answer: 'egypt',
+        img: 'https://flagcdn.com/eg.svg',
+      },
+      {
+        _id: 'coun-4',
+        ques: 'Name of the country?',
+        answer: 'france',
+        img: 'https://flagcdn.com/fr.svg',
+      },
+    ],
+    [
+      {
+        _id: 'coun-5',
+        ques: 'Name of the country?',
+        answer: 'italy',
+        img: 'https://flagcdn.com/it.svg',
+      },
+      {
+        _id: 'coun-6',
+        ques: 'Name of the country?',
+        answer: 'japan',
+        img: 'https://flagcdn.com/jp.svg',
+      },
+      {
+        _id: 'coun-7',
+        ques: 'Name of the country?',
+        answer: 'mexico',
+        img: 'https://flagcdn.com/mx.svg',
+      },
+      {
+        _id: 'coun-8',
+        ques: 'Name of the country?',
+        answer: 'poland',
+        img: 'https://flagcdn.com/pl.svg',
+      },
+      {
+        _id: 'coun-9',
+        ques: 'Name of the country?',
+        answer: 'china',
+        img: 'https://flagcdn.com/cn.svg',
+      },
+    ],
+    [
+      {
+        _id: 'coun-10',
+        ques: 'Name of the country?',
+        answer: 'colombia',
+        img: 'https://flagcdn.com/co.svg',
+      },
+      {
+        _id: 'coun-11',
+        ques: 'Name of the country?',
+        answer: 'greece',
+        img: 'https://flagcdn.com/gr.svg',
+      },
+      {
+        _id: 'coun-12',
+        ques: 'Name of the country?',
+        answer: 'morocco',
+        img: 'https://flagcdn.com/ma.svg',
+      },
+      {
+        _id: 'coun-13',
+        ques: 'Name of the country?',
+        answer: 'norway',
+        img: 'https://flagcdn.com/no.svg',
+      },
+      {
+        _id: 'coun-14',
+        ques: 'Name of the country?',
+        answer: 'united states of america',
+        img: 'https://flagcdn.com/us.svg',
       },
     ],
   ],
@@ -1153,7 +1256,20 @@ const grammar = {
   ],
 };
 
-export const categories = [animals, grammar, numbers, colors, practice];
+export const categories = [
+  animals,
+  colors,
+  grammar,
+  numbers,
+  countries,
+  practice,
+];
+
+// const classRoom = {
+//   categories,
+//   teacher: null,
+//   students:[],
+// }
 
 export const checkIfDone = (user, test) => {
   let newUser = user?.completedTests
