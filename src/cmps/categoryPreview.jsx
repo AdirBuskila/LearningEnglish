@@ -14,12 +14,17 @@ export const CategoryPreview = (props) => {
   };
 
   const categoryStyle = (cat) => {
-    // return {
-    // };
-    const style = {
-      backgroundImage: `url(${cat.img})`,
-      backgroundSize: 'cover',
-    };
+    let style;
+    if (!cat.img) {
+      style = {
+        backgroundImage: `${cat.background}`,
+      };
+    } else {
+      style = {
+        backgroundImage: `url(${cat.img})`,
+        backgroundSize: 'cover',
+      };
+    }
     return style;
   };
 

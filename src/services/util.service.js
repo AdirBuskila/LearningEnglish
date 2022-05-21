@@ -5,6 +5,7 @@ export const utilService = {
   fixTimestamp,
   stringToColor,
   getRandomColor,
+  getPrettyColor,
   isStringColor,
   getInitials,
   UpperCase,
@@ -108,6 +109,23 @@ function getRandomColor() {
   for (var i = 0; i < 6; i++) {
     color += letters[Math.floor(Math.random() * 16)];
   }
+  return color;
+}
+function getPrettyColor() {
+  const colors = [
+    '#FF5D5D',
+    '#92B4EC',
+    '#F73D93',
+    '#FF4949',
+    '#F66B0E',
+    '#0AA1DD',
+    '#AB46D2',
+    '#C0EDA6',
+    '#00FFDD',
+    '#203239',
+    '#3FA796',
+  ];
+  let color = colors[getRandomIntInclusive(0, colors.length - 1)];
   return color;
 }
 
