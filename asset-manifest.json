@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/LearningEnglish/static/css/main.ba5a59a6.css",
-    "main.js": "/LearningEnglish/static/js/main.ce1ac5d4.js",
+    "main.js": "/LearningEnglish/static/js/main.c5557321.js",
     "static/media/party3.gif": "/LearningEnglish/static/media/party3.b78c440f25fd2f676696.gif",
     "static/media/bg1.png": "/LearningEnglish/static/media/bg1.6c05b05a693f5482212a.png",
     "static/media/party4.gif": "/LearningEnglish/static/media/party4.8178c58979e3ca84751c.gif",
@@ -21,10 +21,10 @@
     "static/media/logo.png": "/LearningEnglish/static/media/logo.46edcc43ffba6ee2026b.png",
     "index.html": "/LearningEnglish/index.html",
     "main.ba5a59a6.css.map": "/LearningEnglish/static/css/main.ba5a59a6.css.map",
-    "main.ce1ac5d4.js.map": "/LearningEnglish/static/js/main.ce1ac5d4.js.map"
+    "main.c5557321.js.map": "/LearningEnglish/static/js/main.c5557321.js.map"
   },
   "entrypoints": [
     "static/css/main.ba5a59a6.css",
-    "static/js/main.ce1ac5d4.js"
+    "static/js/main.c5557321.js"
   ]
 }
