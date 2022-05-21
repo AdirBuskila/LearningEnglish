@@ -8,6 +8,7 @@ import { utilService } from './util.service';
 const animals = {
   type: 'animals',
   img: animalsBg,
+  code: 'anml',
   tests: [
     [
       {
@@ -238,6 +239,7 @@ const animals = {
 const colors = {
   type: 'colors',
   img: colorsBg,
+  code: 'color',
   tests: [
     [
       {
@@ -322,6 +324,7 @@ const colors = {
 const countries = {
   type: 'countries',
   img: countriesBg,
+  code: 'coun',
   tests: [
     [
       {
@@ -424,6 +427,7 @@ const countries = {
 const practice = {
   type: 'practice',
   background: 'linear-gradient(to top left, #39b385, #9be15d)',
+  code: 'prac',
   tests: [
     [
       {
@@ -1027,7 +1031,7 @@ const practice = {
 const numbers = {
   type: 'numbers',
   img: numbersBg,
-
+  code: 'nums',
   tests: [
     [
       {
@@ -1226,6 +1230,7 @@ const numbers = {
 const grammar = {
   type: 'grammar',
   img: grammarBg,
+  code: 'gram',
   tests: [
     [
       {
@@ -1259,6 +1264,7 @@ const grammar = {
 const complete = {
   type: 'complete the sentence',
   background: 'linear-gradient(to top left, #e52a5a, #ff585f)',
+  code: 'comp',
   tests: [
     [
       {
@@ -1337,11 +1343,45 @@ export const categories = [
   // complete,
 ];
 
-// const classRoom = {
-//   categories,
-//   teacher: null,
-//   students:[],
-// }
+const teacher = {
+  type: 'teacher',
+  fullName: 'Dana',
+  id: 'pass123',
+  completedTests: ['anml-0', 'anml-1', 'anml-2', 'anml-3', 'anml-4'],
+};
+const students = [
+  {
+    fullName: 'Tomer dahari',
+    id: 210,
+    completedTests: ['anml-0', 'anml-1', 'anml-2', 'anml-3', 'anml-4'],
+  },
+  { fullName: 'Yarden Cohen', id: 211, completedTests: [] },
+  { fullName: 'Tom Shelby', id: 212, completedTests: [] },
+  { fullName: 'Jon wick', id: 213, completedTests: [] },
+  { fullName: 'Ted moseby', id: 214, completedTests: [] },
+];
+
+export const getStudentStats = (student, categories) => {
+  const categoriesCodes = categories.map((c) => c.code);
+  const obj = {};
+  for (const key of categoriesCodes) {
+    obj[key] = 0;
+  }
+  categoriesCodes.forEach((c) => {
+    student.completedTests.forEach((t) => {
+      if (t.includes(c)) {
+        obj[c]++;
+      }
+    });
+  });
+  return Object.values(obj);
+};
+
+export const classRoom = {
+  categories,
+  teacher,
+  students,
+};
 
 export const getHint = (answer) => {
   let str = answer.replaceAll(' ', ',').split('');
@@ -1349,10 +1389,11 @@ export const getHint = (answer) => {
   let counter = 0;
   while (counter <= length - 1) {
     const randomInt = utilService.getRandomIntInclusive(0, str.length - 1);
-    if (str[randomInt] === '_') --counter;
+    if (str[randomInt] === '_') continue;
     str[randomInt] = '_';
     counter++;
   }
+
   return str.join(',');
 };
 

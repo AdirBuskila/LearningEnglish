@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { pathToStorage } from '../services/storage.service';
-import { categories } from '../services/learn.service';
+import { classRoom } from '../services/learn.service';
 
 export const englishSlice = createSlice({
   name: 'learn-english',
@@ -12,7 +12,7 @@ export const englishSlice = createSlice({
   },
   reducers: {
     setData: (state) => {
-      state.data = categories;
+      state.data = classRoom;
     },
     testCompleted: (state, action) => {
       if (!state.student.completedTests.includes(action.payload)) {
@@ -22,7 +22,7 @@ export const englishSlice = createSlice({
       // category
     },
     setCategory: (state, action) => {
-      state.category = state.data.filter(
+      state.category = state.data.categories.filter(
         (catg) => catg.type === action.payload
       )[0];
     },

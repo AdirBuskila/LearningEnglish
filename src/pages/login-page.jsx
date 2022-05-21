@@ -1,21 +1,34 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { setStudent } from '../store/englishSlice';
+import { setData, setStudent } from '../store/englishSlice';
 import { useNavigate } from 'react-router-dom';
 import { pathToStorage } from '../services/storage.service';
 import { useEffect } from 'react';
 
 export const LoginPage = () => {
   const student = useSelector((state) => state.english.student);
+  const data = useSelector((state) => state.english.data);
   const user = pathToStorage.loadFromStorage('student');
   let navigate = useNavigate();
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (user && !student) {
+    if (!data) {
+      dispatch(setData());
+    }
+  }, [data]);
+
+  useEffect(() => {
+    if (user?.id === 'pass123') {
+      dispatch(setStudent(user));
+      navigate('/teacher');
+      return;
+    }
+    if (user) {
       dispatch(setStudent(user));
       navigate('/home');
+      return;
     }
-  });
+  }, []);
 
   const user1 = {
     fullName: 'Adir Buskila',
@@ -31,9 +44,9 @@ export const LoginPage = () => {
   const onLogin = (e) => {
     e.preventDefault();
     const value = e.nativeEvent.target[0].value;
-    if (!value) {
-      dispatch(setStudent(user1));
-      navigate('/home');
+    if (value === data.teacher.id) {
+      dispatch(setStudent(data.teacher));
+      navigate('/teacher');
     } else {
       newUser.fullName = value;
       dispatch(setStudent(newUser));

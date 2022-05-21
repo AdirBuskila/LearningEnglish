@@ -8,7 +8,6 @@ import { getHint } from '../services/learn.service';
 export const QuestionPage = () => {
   const dispatch = useDispatch();
   const testArr = useSelector((state) => state.english.testArr);
-  const student = useSelector((state) => state.english.student);
   const inputRef = useRef(null);
 
   const [curQues, setCurQues] = useState(null);
