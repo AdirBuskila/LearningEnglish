@@ -59,6 +59,7 @@ export const QuestionPage = () => {
       setTimeout(() => {
         dispatch(clearMsg());
         setQuesIdx(QuesIdx + 1);
+        setCurHint(getHint(testArr[QuesIdx].answer));
       }, 2000);
     }
   };
