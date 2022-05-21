@@ -1,6 +1,11 @@
 .question-container {
   .question-title {
     padding: 20px;
+    text-align: center;
+  }
+  .hint {
+    font-size: 18px;
+    margin-top: 10px;
   }
   .question-img {
     width: 180px;
@@ -12,14 +17,40 @@
     border: 1px black solid;
   }
   .form-container {
-    padding-top: 20px;
     gap: 10px;
     .answer-input {
       border: 1px solid lightcoral;
+      margin-top: 10px;
       font-size: 16px;
       height: 30px;
     }
     .submit-btn {
     }
   }
+}
+
+/* CSS */
+.button-34 {
+  background: #5e5df0;
+  border-radius: 999px;
+  box-shadow: #5e5df0 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: Inter, Helvetica, 'Apple Color Emoji', 'Segoe UI Emoji',
+    NotoColorEmoji, 'Noto Color Emoji', 'Segoe UI Symbol', 'Android Emoji',
+    EmojiSymbols, -apple-system, system-ui, 'Segoe UI', Roboto, 'Helvetica Neue',
+    'Noto Sans', sans-serif;
+  // font-size: 16px;
+  // font-weight: 700;
+  // line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
 }

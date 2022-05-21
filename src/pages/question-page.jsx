@@ -3,20 +3,29 @@ import { useEffect, useState, useRef } from 'react';
 import { clearMsg, setMsg } from '../store/userMsgSlice';
 import { setTestArr, testCompleted } from '../store/englishSlice';
 import { utilService } from '../services/util.service';
+import { getHint } from '../services/learn.service';
 
 export const QuestionPage = () => {
   const dispatch = useDispatch();
   const testArr = useSelector((state) => state.english.testArr);
-  const category = useSelector((state) => state.english.category);
   const student = useSelector((state) => state.english.student);
   const inputRef = useRef(null);
 
   const [curQues, setCurQues] = useState(null);
+  const [curHint, setCurHint] = useState(null);
   const [QuesIdx, setQuesIdx] = useState(0);
+  const [hintShown, setHintShown] = useState(false);
+  const [timePassed, setTimePassed] = useState(false);
 
   useEffect(() => {
+    setTimePassed(false);
     setCurQues(testArr[QuesIdx]);
+    setHintShown(false);
     if (inputRef.current) inputRef.current.focus();
+    setTimeout(() => {
+      setTimePassed(true);
+      setCurHint(getHint(testArr[QuesIdx].answer));
+    }, 10000);
   }, [QuesIdx]);
 
   const getAnswer = (e) => {
@@ -38,7 +47,7 @@ export const QuestionPage = () => {
       dispatch(
         setMsg({
           txt: '💪 Another test completed! 💪',
-          msgClass: `party party-${utilService.getRandomIntInclusive(1, 5)}`,
+          msgClass: `party party-${utilService.getRandomIntInclusive(1, 6)}`,
         })
       );
       setTimeout(() => {
@@ -73,6 +82,16 @@ export const QuestionPage = () => {
       {curQues.color && (
         <div style={{ backgroundColor: curQues.color }} className='color'></div>
       )}
+      {!hintShown && timePassed && (
+        <div onClick={() => setHintShown(true)} className='hint button-34'>
+          <p>Hint</p>
+        </div>
+      )}
+      {hintShown && (
+        <div className='hint button-34'>
+          <p>{curHint}</p>
+        </div>
+      )}
       <form
         className='form-container flex column'
         onSubmit={(e) => getAnswer(e)}
@@ -86,6 +105,7 @@ export const QuestionPage = () => {
           className='answer-input'
           type='text'
         />
+
         <button className='submit-btn button-21'>Enter</button>
       </form>
     </div>
