@@ -10,6 +10,7 @@
     border-radius: 20px;
     h1 {
       &.win {
+        font-size: 23px;
         color: #ffca03;
         &::before {
           content: '👑 ';
