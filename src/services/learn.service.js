@@ -3,6 +3,7 @@ import numbersBg from '../assets/img/numbers-bg.png';
 import grammarBg from '../assets/img/grammar-bg.jpg';
 import colorsBg from '../assets/img/colors-bg.png';
 import countriesBg from '../assets/img/countries-bg.jpg';
+import spaceBg from '../assets/img/space-bg.png';
 import { utilService } from './util.service';
 
 const animals = {
@@ -1261,77 +1262,148 @@ const grammar = {
     ],
   ],
 };
-const complete = {
-  type: 'complete the sentence',
-  background: 'linear-gradient(to top left, #e52a5a, #ff585f)',
-  code: 'comp',
+const space = {
+  type: 'solar system',
+  img: spaceBg,
+  code: 'space',
   tests: [
     [
       {
-        _id: 'comp-0',
-        ques: 'Dan is _______ to the school',
-        answer: 'walking',
-        color: '#FF4949',
+        _id: 'space-0',
+        ques: 'Name of the star?',
+        answer: 'sun',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1653235443/English/solar%20system/vu1d9germvb8tfjkq5ox.jpg',
       },
       {
-        _id: 'comp-1',
-        ques: 'Gali is ______ a banana',
-        answer: 'eating',
-        color: '#2155CD',
+        _id: 'space-1',
+        ques: 'Name of the planet?',
+        answer: 'mercury',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1653235437/English/solar%20system/iou9cabmczf8r9hsejxy.png',
       },
       {
-        _id: 'comp-2',
-        ques: 'The boy is __ the car',
-        answer: 'in',
-        color: '#6BCB77',
+        _id: 'space-2',
+        ques: 'Name of the planet?',
+        answer: 'venus',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1653235390/English/solar%20system/ghisbpq4qr65xg2c7gpn.png',
       },
       {
-        _id: 'comp-3',
-        ques: 'The dog is _______',
-        answer: 'barking',
-        color: '#FDF6EC',
+        _id: 'space-3',
+        ques: 'Name of the planet?',
+        answer: 'earth',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1653235389/English/solar%20system/skabhtvk7anvpvwglds2.jpg',
       },
       {
-        _id: 'comp-4',
-        ques: 'Shay is _______',
-        answer: 'jumping',
-        color: '#F9D923',
+        _id: 'space-4',
+        ques: 'Name of the planet?',
+        answer: 'moon',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1653235389/English/solar%20system/vej1mhjinqusbutfhqih.jpg',
       },
     ],
     [
       {
-        _id: 'comp-5',
-        ques: 'Lior is drinking a glass of _____',
-        answer: 'water',
-        color: '#F66B0E',
+        _id: 'space-5',
+        ques: 'Name of the planet?',
+        answer: 'mars',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1653235389/English/solar%20system/l2ahvvray4wrh6x8bkdc.jpg ',
       },
       {
-        _id: 'comp-6',
-        ques: 'The children are ______ on the sofa',
-        answer: 'sitting',
-        color: '#8A39E1',
+        _id: 'space-6',
+        ques: 'Name of the planet?',
+        answer: 'jupiter',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1653235390/English/solar%20system/cddltingfezcsnvrvd8x.png',
       },
       {
-        _id: 'comp-7',
-        ques: 'Tom is at the ___ _______',
-        answer: 'bus station',
-        color: '#2C3333',
+        _id: 'space-7',
+        ques: 'Name of the planet?',
+        answer: 'saturn',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1653235389/English/solar%20system/xlsfirjrwlnilydybbqz.jpg',
       },
       {
-        _id: 'comp-8',
-        ques: 'Dan says "Look! that _____ looks like a rabbit"',
-        answer: 'cloud',
-        color: '#D1D1D1',
+        _id: 'space-8',
+        ques: 'Name of the planet?',
+        answer: 'uranus',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1653235391/English/solar%20system/xxt8ik1ry5y3w7x21nxe.png',
       },
       {
-        _id: 'comp-9',
-        ques: 'The boy is wearing a ____ shirt',
-        answer: 'blue',
-        color: '#F806CC',
+        _id: 'space-9',
+        ques: 'Name of the planet?',
+        answer: 'neptune',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1653235558/English/solar%20system/yqk8rpxpxurrtk4rp0xn.png',
       },
     ],
   ],
 };
+// const complete = {
+//   type: 'complete the sentence',
+//   background: 'linear-gradient(to top left, #e52a5a, #ff585f)',
+//   code: 'comp',
+//   tests: [
+//     [
+//       {
+//         _id: 'comp-0',
+//         ques: 'Dan is _______ to the school',
+//         answer: 'walking',
+//         color: '#FF4949',
+//       },
+//       {
+//         _id: 'comp-1',
+//         ques: 'Gali is ______ a banana',
+//         answer: 'eating',
+//         color: '#2155CD',
+//       },
+//       {
+//         _id: 'comp-2',
+//         ques: 'The boy is __ the car',
+//         answer: 'in',
+//         color: '#6BCB77',
+//       },
+//       {
+//         _id: 'comp-3',
+//         ques: 'The dog is _______',
+//         answer: 'barking',
+//         color: '#FDF6EC',
+//       },
+//       {
+//         _id: 'comp-4',
+//         ques: 'Shay is _______',
+//         answer: 'jumping',
+//         color: '#F9D923',
+//       },
+//     ],
+//     [
+//       {
+//         _id: 'comp-5',
+//         ques: 'Lior is drinking a glass of _____',
+//         answer: 'water',
+//         color: '#F66B0E',
+//       },
+//       {
+//         _id: 'comp-6',
+//         ques: 'The children are ______ on the sofa',
+//         answer: 'sitting',
+//         color: '#8A39E1',
+//       },
+//       {
+//         _id: 'comp-7',
+//         ques: 'Tom is at the ___ _______',
+//         answer: 'bus station',
+//         color: '#2C3333',
+//       },
+//       {
+//         _id: 'comp-8',
+//         ques: 'Dan says "Look! that _____ looks like a rabbit"',
+//         answer: 'cloud',
+//         color: '#D1D1D1',
+//       },
+//       {
+//         _id: 'comp-9',
+//         ques: 'The boy is wearing a ____ shirt',
+//         answer: 'blue',
+//         color: '#F806CC',
+//       },
+//     ],
+//   ],
+// };
 
 export const categories = [
   animals,
@@ -1340,6 +1412,7 @@ export const categories = [
   numbers,
   countries,
   practice,
+  space,
 ];
 
 const teacher = {
