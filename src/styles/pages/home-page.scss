@@ -9,6 +9,15 @@
     background-color: aliceblue;
     border-radius: 20px;
     h1 {
+      &.win {
+        color: #ffca03;
+        &::before {
+          content: '👑 ';
+        }
+        &::after {
+          content: ' 👑';
+        }
+      }
       font-size: 26px;
       color: #f35557;
       margin: 5px 0 5px 0;

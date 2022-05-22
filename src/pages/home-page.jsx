@@ -1,13 +1,10 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { setStudent, setData, setTestArr } from '../store/englishSlice';
 import { pathToStorage } from '../services/storage.service';
 import { Categories } from '../cmps/categories';
-import { QuestionPage } from './question-page';
-import { categories } from '../services/learn.service';
-import { AppHeader } from '../cmps/app-header';
 import { Dashboard } from '../cmps/dashboard';
-import { utilService } from '../services/util.service';
+import { StudentName } from '../cmps/student-name';
 
 export const HomePage = () => {
   const dispatch = useDispatch();
@@ -15,8 +12,6 @@ export const HomePage = () => {
   const data = useSelector((state) => state.english.data);
   const testArr = useSelector((state) => state.english.testArr);
   const student = useSelector((state) => state.english.student);
-
-  const [colorMode, setColorMode] = useState(false);
 
   useEffect(() => {
     if (!data) dispatch(setData());
@@ -32,39 +27,11 @@ export const HomePage = () => {
     }
   });
 
-  const coloredName = () => {
-    if (!student) return;
-    return student.fullName.split('').map((l) => {
-      return <span style={{ color: utilService.getPrettyColor() }}>{l}</span>;
-    });
-  };
-
-  coloredName();
-
   if (!data) return <></>;
 
   return (
     <section className='home-page flex column justify-start'>
-      <div className='title-container'>
-        {student && !colorMode && (
-          <h1>
-            Welcome back{' '}
-            <span onClick={() => setColorMode(!colorMode)}>
-              {student.fullName}
-            </span>
-            !
-          </h1>
-        )}
-        {student && colorMode && (
-          <h1>
-            Welcome back{' '}
-            <span onClick={() => setColorMode(!colorMode)}>
-              {coloredName()}
-            </span>
-            !
-          </h1>
-        )}
-      </div>
+      <StudentName student={student} />
       <Dashboard />
       <Categories />
     </section>

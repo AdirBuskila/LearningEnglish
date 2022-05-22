@@ -1340,7 +1340,6 @@ export const categories = [
   numbers,
   countries,
   practice,
-  // complete,
 ];
 
 const teacher = {
@@ -1382,6 +1381,23 @@ export const classRoom = {
   teacher,
   students,
 };
+let arr = [];
+let counter = 0;
+while (counter < 190) {
+  arr.push('x');
+  counter++;
+}
+console.log(arr);
+
+export const GetNumCategories = (categories) => {
+  let counter = 0;
+  categories
+    .map((cat) => cat.tests)
+    .forEach((test) => {
+      test.forEach((t) => (counter += t.length));
+    });
+  return counter;
+};
 
 export const getHint = (answer) => {
   let str = answer.replaceAll(' ', ',').split('');
@@ -1393,7 +1409,6 @@ export const getHint = (answer) => {
     str[randomInt] = '_';
     counter++;
   }
-
   return str.join(',');
 };
 

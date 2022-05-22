@@ -24,7 +24,7 @@ export const QuestionPage = () => {
     setTimeout(() => {
       setTimePassed(true);
       setCurHint(getHint(testArr[QuesIdx].answer));
-    }, 10000);
+    }, 2000);
   }, [QuesIdx]);
 
   const getAnswer = (e) => {
