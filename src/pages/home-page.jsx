@@ -5,6 +5,7 @@ import { pathToStorage } from '../services/storage.service';
 import { Categories } from '../cmps/categories';
 import { Dashboard } from '../cmps/dashboard';
 import { StudentName } from '../cmps/student-name';
+import { AppHeader } from '../cmps/app-header';
 
 export const HomePage = () => {
   const dispatch = useDispatch();
@@ -31,6 +32,7 @@ export const HomePage = () => {
 
   return (
     <section className='home-page flex column justify-start'>
+      <AppHeader />
       <StudentName student={student} />
       <Dashboard />
       <Categories />

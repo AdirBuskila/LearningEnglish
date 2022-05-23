@@ -3,9 +3,9 @@ import { setData, setStudent } from '../store/englishSlice';
 import { useNavigate } from 'react-router-dom';
 import { pathToStorage } from '../services/storage.service';
 import { useEffect } from 'react';
+import { setMsg } from '../store/userMsgSlice';
 
 export const LoginPage = () => {
-  const student = useSelector((state) => state.english.student);
   const data = useSelector((state) => state.english.data);
   const user = pathToStorage.loadFromStorage('student');
   let navigate = useNavigate();
@@ -44,6 +44,10 @@ export const LoginPage = () => {
   const onLogin = (e) => {
     e.preventDefault();
     const value = e.nativeEvent.target[0].value;
+    if (value.length < 2)
+      return dispatch(
+        setMsg({ txt: 'Please enter a valid name', msgClass: 'error' })
+      );
     if (value === data.teacher.id) {
       dispatch(setStudent(data.teacher));
       navigate('/teacher');

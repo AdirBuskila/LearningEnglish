@@ -20,7 +20,7 @@ export const StudentName = (props) => {
 
   const nameDisplay = (student, className = '') => {
     if (allDone) className = 'win';
-    if (colorMode) {
+    if (!colorMode) {
       return (
         <h1 className={className}>
           Welcome back{' '}

@@ -265,7 +265,7 @@ const colors = {
         _id: 'color-3',
         ques: 'Name of the color?',
         answer: 'white',
-        color: '#FDF6EC',
+        color: '#FFFFFF',
       },
       {
         _id: 'color-4',
@@ -1454,13 +1454,6 @@ export const classRoom = {
   teacher,
   students,
 };
-let arr = [];
-let counter = 0;
-while (counter < 190) {
-  arr.push('x');
-  counter++;
-}
-console.log(arr);
 
 export const GetNumCategories = (categories) => {
   let counter = 0;
@@ -1490,4 +1483,13 @@ export const checkIfDone = (user, test) => {
     ? user
     : { fullName: user.fullName, completedTests: [] };
   return test.every((t) => newUser.completedTests.includes(t._id));
+};
+
+export const msgObj = {
+  correct: { txt: '🤩 You are correct ! 🤩', msgClass: 'success' },
+  wrong: { txt: '😬 Try Again! 😬', msgClass: 'red' },
+  party: {
+    txt: '💪 Another test completed! 💪',
+    msgClass: `party party-${utilService.getRandomIntInclusive(1, 6)}`,
+  },
 };

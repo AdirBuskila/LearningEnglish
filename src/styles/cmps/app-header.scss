@@ -8,6 +8,9 @@
     #ffffff50,
     #ffffff00
   );
+  &.hidden {
+    display: none;
+  }
   img {
     width: 285px;
   }

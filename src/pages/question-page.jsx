@@ -3,7 +3,7 @@ import { useEffect, useState, useRef } from 'react';
 import { clearMsg, setMsg } from '../store/userMsgSlice';
 import { setTestArr, testCompleted } from '../store/englishSlice';
 import { utilService } from '../services/util.service';
-import { getHint } from '../services/learn.service';
+import { getHint, msgObj } from '../services/learn.service';
 
 export const QuestionPage = () => {
   const dispatch = useDispatch();
@@ -18,14 +18,14 @@ export const QuestionPage = () => {
 
   useEffect(() => {
     setTimePassed(false);
-    setCurQues(testArr[QuesIdx]);
     setHintShown(false);
+    setCurQues(testArr[QuesIdx]);
     if (inputRef.current) inputRef.current.focus();
     setTimeout(() => {
       setTimePassed(true);
       setCurHint(getHint(testArr[QuesIdx].answer));
-    }, 2000);
-  }, [QuesIdx]);
+    }, 7000);
+  }, [testArr, QuesIdx]);
 
   const getAnswer = (e) => {
     e.preventDefault();
@@ -43,29 +43,29 @@ export const QuestionPage = () => {
     const isFinal = QuesIdx + 1 === testArr.length ? true : false;
     if (isFinal) {
       dispatch(testCompleted(curQues._id));
-      dispatch(
-        setMsg({
-          txt: '💪 Another test completed! 💪',
-          msgClass: `party party-${utilService.getRandomIntInclusive(1, 6)}`,
-        })
-      );
+      const party = {
+        ...msgObj.party,
+        msgClass: `party party-${utilService.getRandomIntInclusive(1, 6)}`,
+      };
+      dispatch(setMsg(party));
       setTimeout(() => {
         dispatch(clearMsg());
         dispatch(setTestArr(null));
       }, 3000);
     } else {
-      dispatch(setMsg({ txt: '🤩 You are correct! 🤩', msgClass: 'success' }));
+      dispatch(setMsg(msgObj.correct));
       dispatch(testCompleted(curQues._id));
+      setHintShown(false);
       setTimeout(() => {
-        dispatch(clearMsg());
         setQuesIdx(QuesIdx + 1);
         setCurHint(getHint(testArr[QuesIdx].answer));
+        dispatch(clearMsg());
       }, 2000);
     }
   };
 
   const wrongAnswer = () => {
-    dispatch(setMsg({ txt: '😬 Try Again! 😬', msgClass: 'error' }));
+    dispatch(setMsg(msgObj.wrong));
     setTimeout(() => {
       dispatch(clearMsg());
     }, 2000);

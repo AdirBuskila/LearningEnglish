@@ -7,7 +7,6 @@ import { routes } from './routes';
 import { UserMsg } from './cmps/user-msg';
 
 import './styles/styles.scss';
-import { AppHeader } from './cmps/app-header';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -15,7 +14,6 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
-        <AppHeader />
         <Routes>
           {routes.map((route) => (
             <Route key={route.path} element={route.element} path={route.path} />
