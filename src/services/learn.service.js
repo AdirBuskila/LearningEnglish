@@ -1490,6 +1490,6 @@ export const msgObj = {
   wrong: { txt: '😬 Try Again! 😬', msgClass: 'red' },
   party: {
     txt: '💪 Another test completed! 💪',
-    msgClass: `party party-${utilService.getRandomIntInclusive(1, 6)}`,
+    msgClass: `party party-1`,
   },
 };

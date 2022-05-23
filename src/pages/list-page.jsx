@@ -6,6 +6,7 @@ import { setCategory, setData } from '../store/englishSlice';
 import { utilService } from '../services/util.service';
 import { TestsList } from '../cmps/testsList';
 import { QuestionPage } from './question-page';
+import { AppHeader } from '../cmps/app-header';
 
 export const ListPage = () => {
   const category = useSelector((state) => state.english.category);
@@ -22,6 +23,7 @@ export const ListPage = () => {
   if (!category) return <></>;
   return (
     <section className='list-page flex column align-center'>
+      <AppHeader />
       <div className='list-title-container'>
         <h1>{utilService.UpperCase(category.type)} Tests</h1>
       </div>
