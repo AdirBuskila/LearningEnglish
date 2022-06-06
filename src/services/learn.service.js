@@ -1,10 +1,12 @@
+import { utilService } from './util.service';
 import animalsBg from '../assets/img/animals-bg.jpg';
 import numbersBg from '../assets/img/numbers-bg.png';
 import grammarBg from '../assets/img/grammar-bg.jpg';
 import colorsBg from '../assets/img/colors-bg.png';
 import countriesBg from '../assets/img/countries-bg.jpg';
 import spaceBg from '../assets/img/space-bg.png';
-import { utilService } from './util.service';
+import foodBg from '../assets/img/food-bg.jpg';
+import fruAndVegBg from '../assets/img/fruits-veggies.png';
 
 const animals = {
   type: 'animals',
@@ -1333,6 +1335,201 @@ const space = {
     ],
   ],
 };
+const food = {
+  type: 'food',
+  img: foodBg,
+  code: 'food',
+  tests: [
+    [
+      {
+        _id: 'food-0',
+        ques: 'Name of the food?',
+        answer: 'sandwich',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1654544484/English/food/g5vzqvc4duizqaheoczh.jpg',
+      },
+      {
+        _id: 'food-1',
+        ques: 'Name of the food?',
+        answer: 'salad',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1654544484/English/food/jzgpbgvuemdpmkldnn8v.jpg',
+      },
+      {
+        _id: 'food-2',
+        ques: 'Name of the food?',
+        answer: 'pizza',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1654544484/English/food/bnemhi2tk8kk94gge0yu.jpg',
+      },
+      {
+        _id: 'food-3',
+        ques: 'Name of the food?',
+        answer: 'hamburger',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1654544480/English/food/uofa2vpdqneojxf1uzs6.jpg',
+      },
+      {
+        _id: 'food-4',
+        ques: 'Name of the food?',
+        answer: 'falafel',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1654544485/English/food/d5f01obspclplmk3z36b.png',
+      },
+    ],
+    [
+      {
+        _id: 'food-5',
+        ques: 'Name of the food?',
+        answer: 'ice cream',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1654544479/English/food/boz3equf0pilnkyychvj.jpg',
+      },
+      {
+        _id: 'food-6',
+        ques: 'Name of the food?',
+        answer: 'soup',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1654544485/English/food/tycrdsccqqz9zpj7cjma.jpg',
+      },
+      {
+        _id: 'food-7',
+        ques: 'Name of the food?',
+        answer: 'spaghetti',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1654544485/English/food/zenwhiidojk84ppeuudp.jpg',
+      },
+    ],
+  ],
+};
+const furitsAndVeggie = {
+  type: 'Fruits & Vegetables',
+  img: fruAndVegBg,
+  code: 'frvg',
+  tests: [
+    [
+      {
+        _id: 'frvg-0',
+        ques: 'Name of the fruit',
+        answer: 'apple',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1654544478/English/food/d58nkjucbkuojsjsn2gv.jpg',
+      },
+      {
+        _id: 'frvg-1',
+        ques: 'Name of the fruit',
+        answer: 'banana',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1654544479/English/food/c802tvtbpyoh1tinv1yl.jpg',
+      },
+      {
+        _id: 'frvg-2',
+        ques: 'Name of the fruit',
+        answer: 'orange',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1654544482/English/food/sxlt6bxyl3hybmhqjdgk.jpg',
+      },
+      {
+        _id: 'frvg-3',
+        ques: 'Name of the fruit',
+        answer: 'mango',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1654544481/English/food/dub1etkeexlrscuzho8h.jpg',
+      },
+      {
+        _id: 'frvg-4',
+        ques: 'Name of the fruit',
+        answer: 'lemon',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1654544480/English/food/iolxysmjsrxwwff0of71.jpg',
+      },
+    ],
+    [
+      {
+        _id: 'frvg-5',
+        ques: 'Name of the fruit',
+        answer: 'watermelon',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1654544485/English/food/llhl2rhaf3wfi052rznj.png',
+      },
+      {
+        _id: 'frvg-6',
+        ques: 'Name of the fruit',
+        answer: 'pear',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1654545416/English/food/rjsabvcnfmokkgiymjz2.jpg',
+      },
+      {
+        _id: 'frvg-7',
+        ques: 'Name of the fruit',
+        answer: 'strawberry',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1654544485/English/food/zr8vwy8gpvzh0ql1m1uq.jpg',
+      },
+      {
+        _id: 'frvg-8',
+        ques: 'Name of the fruit',
+        answer: 'pineapple',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1654544482/English/food/opzy76wduvxxbh62txj2.jpg',
+      },
+      {
+        _id: 'frvg-9',
+        ques: 'Name of the fruit',
+        answer: 'coconut',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1654544483/English/food/iysxrlb6awcm0h27n4nn.png',
+      },
+    ],
+    [
+      {
+        _id: 'frvg-10',
+        ques: 'Name of the fruit',
+        answer: 'grape',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1654544479/English/food/tc7jrgutc6vdnqnbadhn.jpg',
+      },
+      {
+        _id: 'frvg-11',
+        ques: 'Name of the fruit',
+        answer: 'cherry',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1654544481/English/food/oe2dxcs28ihprcfxxfsk.jpg',
+      },
+      {
+        _id: 'frvg-12',
+        ques: 'Name of the vegetable',
+        answer: 'tomato',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1654544485/English/food/xcytmvskanrhpqe4jmit.jpg',
+      },
+      {
+        _id: 'frvg-13',
+        ques: 'Name of the vegetable',
+        answer: 'cucumber',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1654544480/English/food/b8tex2hf7xmkbn2dsyyv.jpg',
+      },
+      {
+        _id: 'frvg-14',
+        ques: 'Name of the vegetable',
+        answer: 'carrot',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1654544478/English/food/d9ye8qxxmu4fi2xfih0n.jpg',
+      },
+    ],
+    [
+      {
+        _id: 'frvg-15',
+        ques: 'Name of the vegetable',
+        answer: 'potato',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1654544483/English/food/kchfe9smalho5drpa1qn.jpg',
+      },
+      {
+        _id: 'frvg-16',
+        ques: 'Name of the vegetable',
+        answer: 'pumpkin',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1654544484/English/food/hh6wgvbvcvw04kjolya6.jpg',
+      },
+      {
+        _id: 'frvg-15',
+        ques: 'Name of the vegetable',
+        answer: 'cabbage',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1654544478/English/food/zccovhfwx6fdftxgc2w1.png',
+      },
+      {
+        _id: 'frvg-16',
+        ques: 'Name of the vegetable',
+        answer: 'broccoli',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1654544478/English/food/ydzpcsiycbv7svcpdqvd.jpg',
+      },
+      {
+        _id: 'frvg-17',
+        ques: 'Name of the vegetable',
+        answer: 'mushroom',
+        img: 'https://res.cloudinary.com/dubjerksn/image/upload/v1654544482/English/food/ed4ew5wzcw9dmum9mkya.jpg',
+      },
+    ],
+  ],
+};
+
 // const complete = {
 //   type: 'complete the sentence',
 //   background: 'linear-gradient(to top left, #e52a5a, #ff585f)',
@@ -1408,11 +1605,13 @@ const space = {
 export const categories = [
   animals,
   colors,
+  food,
+  furitsAndVeggie,
   grammar,
   numbers,
   countries,
-  practice,
   space,
+  practice,
 ];
 
 const teacher = {
