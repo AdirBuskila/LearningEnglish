@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/LearningEnglish/static/css/main.01a48b3c.css",
-    "main.js": "/LearningEnglish/static/js/main.460c93d1.js",
+    "main.css": "/LearningEnglish/static/css/main.1dd55952.css",
+    "main.js": "/LearningEnglish/static/js/main.5aa7dded.js",
     "static/media/party3.gif": "/LearningEnglish/static/media/party3.b78c440f25fd2f676696.gif",
     "static/media/bg1.png": "/LearningEnglish/static/media/bg1.6c05b05a693f5482212a.png",
     "static/media/party4.gif": "/LearningEnglish/static/media/party4.8178c58979e3ca84751c.gif",
+    "static/media/fruits-veggies.png": "/LearningEnglish/static/media/fruits-veggies.0c11189155aba57cc71a.png",
     "static/media/colors-bg.png": "/LearningEnglish/static/media/colors-bg.2127ed3686b3e8d0e77f.png",
     "static/media/party1.gif": "/LearningEnglish/static/media/party1.f90e61a875a2fbc1045b.gif",
     "static/media/party2.gif": "/LearningEnglish/static/media/party2.89113a4024ed30efb48b.gif",
@@ -14,6 +15,7 @@
     "static/media/party5.gif": "/LearningEnglish/static/media/party5.c87c04d7d9a24f0de8ec.gif",
     "static/media/space-bg.png": "/LearningEnglish/static/media/space-bg.e3e81c50b78a2bb2d5a4.png",
     "static/media/party6.gif": "/LearningEnglish/static/media/party6.abca0fd9e62a304a18a8.gif",
+    "static/media/food-bg.jpg": "/LearningEnglish/static/media/food-bg.83cc6f8b7a7b30b35e23.jpg",
     "static/media/bg2.jpg": "/LearningEnglish/static/media/bg2.65b76627397f4fb538c7.jpg",
     "static/media/animals-bg.jpg": "/LearningEnglish/static/media/animals-bg.9e037b294b845d260218.jpg",
     "static/media/grammar-bg.jpg": "/LearningEnglish/static/media/grammar-bg.880ade6b0caa9521dbbc.jpg",
@@ -22,11 +24,11 @@
     "static/media/Monoton-Regular.ttf": "/LearningEnglish/static/media/Monoton-Regular.1f3bd420f1198c5c85e8.ttf",
     "static/media/logo.png": "/LearningEnglish/static/media/logo.46edcc43ffba6ee2026b.png",
     "index.html": "/LearningEnglish/index.html",
-    "main.01a48b3c.css.map": "/LearningEnglish/static/css/main.01a48b3c.css.map",
-    "main.460c93d1.js.map": "/LearningEnglish/static/js/main.460c93d1.js.map"
+    "main.1dd55952.css.map": "/LearningEnglish/static/css/main.1dd55952.css.map",
+    "main.5aa7dded.js.map": "/LearningEnglish/static/js/main.5aa7dded.js.map"
   },
   "entrypoints": [
-    "static/css/main.01a48b3c.css",
-    "static/js/main.460c93d1.js"
+    "static/css/main.1dd55952.css",
+    "static/js/main.5aa7dded.js"
   ]
 }
