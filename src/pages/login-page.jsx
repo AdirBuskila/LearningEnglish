@@ -30,11 +30,6 @@ export const LoginPage = () => {
     }
   }, []);
 
-  const user1 = {
-    fullName: 'Adir Buskila',
-    id: 209,
-    completedTests: [],
-  };
   let newUser = {
     fullName: '',
     id: 210,

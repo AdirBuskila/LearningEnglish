@@ -28,10 +28,15 @@ export const CategoryPreview = (props) => {
     return style;
   };
 
+  const onSetCategory = () => {
+    dispatch(setCategory(category.type));
+    window.scrollTo(0, 0);
+  };
+
   return (
     <Link style={{ display: 'contents' }} to={`/category/${category.type}`}>
       <div
-        onClick={() => dispatch(setCategory(category.type))}
+        onClick={onSetCategory}
         style={categoryStyle(category)}
         className={categoryClass(category)}
       >

@@ -1,11 +1,17 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { setStudent, setData, setTestArr } from '../store/englishSlice';
+import {
+  setStudent,
+  setData,
+  setTestArr,
+  setAllDone,
+} from '../store/englishSlice';
 import { pathToStorage } from '../services/storage.service';
 import { Categories } from '../cmps/categories';
 import { Dashboard } from '../cmps/dashboard';
 import { StudentName } from '../cmps/student-name';
 import { AppHeader } from '../cmps/app-header';
+import { getNumCategories } from '../services/learn.service';
 
 export const HomePage = () => {
   const dispatch = useDispatch();
@@ -25,6 +31,12 @@ export const HomePage = () => {
         completedTests: [],
       });
       dispatch(setStudent(pathToStorage.loadFromStorage('student')));
+    }
+  });
+  useEffect(() => {
+    console.log('student :>> ', student);
+    if (getNumCategories(data.categories) === student.completedTests.length) {
+      dispatch(setAllDone(true));
     }
   });
 

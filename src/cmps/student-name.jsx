@@ -2,23 +2,15 @@ import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { GetNumCategories } from '../services/learn.service';
 import { utilService } from '../services/util.service';
+import { setAllDone } from '../store/englishSlice';
 
 export const StudentName = (props) => {
   const { student } = props;
-  const categories = useSelector((state) => state.english.data.categories);
+  const allDone = useSelector((state) => state.english.allDone);
   const [colorMode, setColorMode] = useState(false);
-  const [allDone, setAllDone] = useState(false);
-
-  const checkForDone = () => {
-    if (GetNumCategories(categories) === student.completedTests.length)
-      setAllDone(true);
-  };
-
-  useEffect(() => {
-    checkForDone();
-  });
 
   const nameDisplay = (student, className = '') => {
+    console.log('allDone :>> ', allDone);
     if (allDone) className = 'win';
     if (!colorMode) {
       return (

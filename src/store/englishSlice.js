@@ -9,6 +9,7 @@ export const englishSlice = createSlice({
     category: null,
     testArr: null,
     student: null,
+    allDone: null,
   },
   reducers: {
     setData: (state) => {
@@ -33,6 +34,9 @@ export const englishSlice = createSlice({
     setTestArr: (state, action) => {
       state.testArr = action.payload;
     },
+    setAllDone: (state, action) => {
+      state.allDone = action.payload;
+    },
   },
 });
 
@@ -44,6 +48,7 @@ export const {
   setTestArr,
   saveTest,
   testCompleted,
+  setAllDone,
 } = englishSlice.actions;
 
 export default englishSlice.reducer;
