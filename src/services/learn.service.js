@@ -1655,14 +1655,12 @@ export const classRoom = {
 };
 
 export const getNumCategories = (categories) => {
-  console.log('categories :>> ', categories);
   let counter = 0;
   categories
     .map((cat) => cat.tests)
     .forEach((test) => {
       test.forEach((t) => (counter += t.length));
     });
-  console.log('counter :>> ', counter);
   return counter;
 };
 

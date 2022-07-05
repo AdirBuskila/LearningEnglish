@@ -7,7 +7,6 @@ import { routes } from './routes';
 import { UserMsg } from './cmps/user-msg';
 
 import './styles/styles.scss';
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(

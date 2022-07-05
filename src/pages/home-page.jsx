@@ -34,7 +34,6 @@ export const HomePage = () => {
     }
   });
   useEffect(() => {
-    console.log('student :>> ', student);
     if (getNumCategories(data.categories) === student.completedTests.length) {
       dispatch(setAllDone(true));
     }

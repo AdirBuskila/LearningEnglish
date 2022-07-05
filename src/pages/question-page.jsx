@@ -6,13 +6,14 @@ import { utilService } from '../services/util.service';
 import { getHint, getNumCategories, msgObj } from '../services/learn.service';
 
 export const QuestionPage = () => {
+  const synth = window.speechSynthesis;
   const dispatch = useDispatch();
   const testArr = useSelector((state) => state.english.testArr);
-  const categories = useSelector((state) => state.english.categories);
-  const student = useSelector((state) => state.english.student);
   const inputRef = useRef(null);
+  const sound = new SpeechSynthesisUtterance('');
 
   const [curQues, setCurQues] = useState(null);
+  const [curSound, setCurSound] = useState(null);
   const [curHint, setCurHint] = useState(null);
   const [QuesIdx, setQuesIdx] = useState(0);
   const [hintShown, setHintShown] = useState(false);
@@ -22,6 +23,7 @@ export const QuestionPage = () => {
     setTimePassed(false);
     setHintShown(false);
     setCurQues(testArr[QuesIdx]);
+    setCurSound(new SpeechSynthesisUtterance(testArr[QuesIdx].answer));
     if (inputRef.current) inputRef.current.focus();
     setTimeout(() => {
       setTimePassed(true);
@@ -73,6 +75,10 @@ export const QuestionPage = () => {
     }, 2000);
   };
 
+  const playSound = () => {
+    synth.speak(curSound);
+  };
+
   if (!curQues) return <p>No Test</p>;
   const { ques } = curQues;
   return (
@@ -84,13 +90,19 @@ export const QuestionPage = () => {
       {curQues.color && (
         <div style={{ backgroundColor: curQues.color }} className='color'></div>
       )}
+      <button onClick={playSound} className='sound-btn button-21'>
+        <img
+          className='sound-img'
+          src='https://res.cloudinary.com/dubjerksn/image/upload/v1657052750/English/d0uusalsuqq3wo5ple9d.png'
+        />
+      </button>
       {!hintShown && timePassed && (
-        <div onClick={() => setHintShown(true)} className='hint button-34'>
+        <div onClick={() => setHintShown(true)} className='hint button-21'>
           <p>Hint</p>
         </div>
       )}
       {hintShown && (
-        <div className='hint button-34'>
+        <div className='hint button-21'>
           <p>{curHint}</p>
         </div>
       )}

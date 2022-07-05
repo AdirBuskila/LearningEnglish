@@ -10,7 +10,6 @@ export const StudentName = (props) => {
   const [colorMode, setColorMode] = useState(false);
 
   const nameDisplay = (student, className = '') => {
-    console.log('allDone :>> ', allDone);
     if (allDone) className = 'win';
     if (!colorMode) {
       return (
