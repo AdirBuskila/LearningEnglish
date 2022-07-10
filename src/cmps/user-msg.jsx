@@ -26,7 +26,7 @@ export const UserMsg = () => {
   };
 
   const editMode = () => {
-    return msg.msgClass.includes('fresh-air') ? true : false;
+    return msg.msgClass.includes('fresh-air edit') ? true : false;
   };
 
   const backgroundMode = () => {

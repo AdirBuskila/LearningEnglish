@@ -29,6 +29,9 @@
     &.success {
       background-color: rgb(174, 238, 147);
     }
+    // &.background {
+
+    // }
     &.party {
       height: 180px;
       background-size: cover;
@@ -50,6 +53,36 @@
     }
     &.party-6 {
       background-image: url('../../assets/img/party6.gif');
+    }
+    &.party-7 {
+      background-image: url('../../assets/img/party7.gif');
+    }
+    &.party-8 {
+      background-image: url('../../assets/img/party8.gif');
+      background-position: center;
+    }
+    &.party-9 {
+      background-image: url('../../assets/img/party9.gif');
+      background-position: center;
+    }
+    &.party-10 {
+      background-image: url('../../assets/img/party10.gif');
+      background-position: center;
+    }
+    &.party-11 {
+      background-image: url('../../assets/img/party11.gif');
+    }
+    &.party-12 {
+      background-image: url('../../assets/img/party12.gif');
+    }
+    &.party-13 {
+      background-image: url('../../assets/img/party13.gif');
+    }
+    &.party-14 {
+      background-image: url('../../assets/img/party14.gif');
+    }
+    &.party-15 {
+      background-image: url('../../assets/img/party15.gif');
     }
     p {
       font-size: 18px;

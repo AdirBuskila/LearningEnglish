@@ -8,7 +8,7 @@ export const Dashboard = () => {
       dispatch(
         setMsg({
           txt: 'Select Background from the options',
-          msgClass: `party background`,
+          msgClass: `party background fresh-air`,
         })
       );
     }
@@ -16,7 +16,7 @@ export const Dashboard = () => {
       dispatch(
         setMsg({
           txt: 'Enter new full name',
-          msgClass: `party fresh-air`,
+          msgClass: `party fresh-air edit`,
         })
       );
     }

@@ -3,14 +3,13 @@ import { useEffect, useState, useRef } from 'react';
 import { clearMsg, setMsg } from '../store/userMsgSlice';
 import { setTestArr, testCompleted } from '../store/englishSlice';
 import { utilService } from '../services/util.service';
-import { getHint, getNumCategories, msgObj } from '../services/learn.service';
+import { getHint, msgObj } from '../services/learn.service';
 
 export const QuestionPage = () => {
   const synth = window.speechSynthesis;
   const dispatch = useDispatch();
   const testArr = useSelector((state) => state.english.testArr);
   const inputRef = useRef(null);
-  const sound = new SpeechSynthesisUtterance('');
 
   const [curQues, setCurQues] = useState(null);
   const [curSound, setCurSound] = useState(null);
@@ -49,7 +48,7 @@ export const QuestionPage = () => {
       dispatch(testCompleted(curQues._id));
       const party = {
         ...msgObj.party,
-        msgClass: `party party-${utilService.getRandomIntInclusive(1, 6)}`,
+        msgClass: `party party-${utilService.getRandomIntInclusive(1, 15)}`,
       };
       dispatch(setMsg(party));
       setTimeout(() => {

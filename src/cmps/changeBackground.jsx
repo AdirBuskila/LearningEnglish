@@ -16,13 +16,13 @@ export const ChangeBackground = () => {
 
   return (
     <div className='btn-container'>
-      <button className='option' onClick={() => changeBackground(0)}>
+      <button className='option op1' onClick={() => changeBackground(0)}>
         1
       </button>
-      <button className='option' onClick={() => changeBackground(1)}>
+      <button className='option op2' onClick={() => changeBackground(1)}>
         2
       </button>
-      <button className='option' onClick={() => changeBackground(2)}>
+      <button className='option op3' onClick={() => changeBackground(2)}>
         3
       </button>
     </div>

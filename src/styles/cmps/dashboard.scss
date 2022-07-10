@@ -30,6 +30,18 @@
   -webkit-user-select: none;
   touch-action: manipulation;
   white-space: nowrap;
+  &.op1 {
+    background: url('../../assets/img/bg.jpg');
+    background-size: contain;
+  }
+  &.op2 {
+    background: url('../../assets/img/bg1.png');
+    background-size: contain;
+  }
+  &.op3 {
+    background: url('../../assets/img/bg2.jpg');
+    background-size: contain;
+  }
 }
 
 .option:not([disabled]):focus {
