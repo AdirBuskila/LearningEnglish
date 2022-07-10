@@ -1,20 +1,29 @@
 {
   "files": {
-    "main.css": "/LearningEnglish/static/css/main.84e69274.css",
-    "main.js": "/LearningEnglish/static/js/main.585b711e.js",
+    "main.css": "/LearningEnglish/static/css/main.816e6e4c.css",
+    "main.js": "/LearningEnglish/static/js/main.b87e1296.js",
+    "static/media/party8.gif": "/LearningEnglish/static/media/party8.f6dc9afe763c337fbeca.gif",
     "static/media/party3.gif": "/LearningEnglish/static/media/party3.b78c440f25fd2f676696.gif",
+    "static/media/party7.gif": "/LearningEnglish/static/media/party7.b2d5e6b2a450bff9adee.gif",
+    "static/media/party15.gif": "/LearningEnglish/static/media/party15.ba8884df6808103c53bd.gif",
+    "static/media/party9.gif": "/LearningEnglish/static/media/party9.a686e8cbb5c7e8569532.gif",
     "static/media/bg1.png": "/LearningEnglish/static/media/bg1.6c05b05a693f5482212a.png",
     "static/media/party4.gif": "/LearningEnglish/static/media/party4.8178c58979e3ca84751c.gif",
+    "static/media/party10.gif": "/LearningEnglish/static/media/party10.87ac16d41b90d6efa9df.gif",
     "static/media/fruits-veggies.png": "/LearningEnglish/static/media/fruits-veggies.0c11189155aba57cc71a.png",
     "static/media/colors-bg.png": "/LearningEnglish/static/media/colors-bg.2127ed3686b3e8d0e77f.png",
     "static/media/party1.gif": "/LearningEnglish/static/media/party1.f90e61a875a2fbc1045b.gif",
+    "static/media/party14.gif": "/LearningEnglish/static/media/party14.05f00dd63b67223143fa.gif",
+    "static/media/party13.gif": "/LearningEnglish/static/media/party13.5818b7c7d924b3786351.gif",
     "static/media/party2.gif": "/LearningEnglish/static/media/party2.89113a4024ed30efb48b.gif",
+    "static/media/party12.gif": "/LearningEnglish/static/media/party12.5f11814283d9e84efc98.gif",
     "static/media/bg.jpg": "/LearningEnglish/static/media/bg.d910ee2a344674be8b81.jpg",
     "static/media/numbers-bg.png": "/LearningEnglish/static/media/numbers-bg.0249f0a6bde47529d350.png",
     "static/media/BalsamiqSans-Regular.ttf": "/LearningEnglish/static/media/BalsamiqSans-Regular.4279fb088feb5004db62.ttf",
     "static/media/party5.gif": "/LearningEnglish/static/media/party5.c87c04d7d9a24f0de8ec.gif",
     "static/media/space-bg.png": "/LearningEnglish/static/media/space-bg.e3e81c50b78a2bb2d5a4.png",
     "static/media/party6.gif": "/LearningEnglish/static/media/party6.abca0fd9e62a304a18a8.gif",
+    "static/media/party11.gif": "/LearningEnglish/static/media/party11.3d110ba67ad7532712a2.gif",
     "static/media/food-bg.jpg": "/LearningEnglish/static/media/food-bg.83cc6f8b7a7b30b35e23.jpg",
     "static/media/bg2.jpg": "/LearningEnglish/static/media/bg2.65b76627397f4fb538c7.jpg",
     "static/media/animals-bg.jpg": "/LearningEnglish/static/media/animals-bg.9e037b294b845d260218.jpg",
@@ -24,11 +33,11 @@
     "static/media/Monoton-Regular.ttf": "/LearningEnglish/static/media/Monoton-Regular.1f3bd420f1198c5c85e8.ttf",
     "static/media/logo.png": "/LearningEnglish/static/media/logo.46edcc43ffba6ee2026b.png",
     "index.html": "/LearningEnglish/index.html",
-    "main.84e69274.css.map": "/LearningEnglish/static/css/main.84e69274.css.map",
-    "main.585b711e.js.map": "/LearningEnglish/static/js/main.585b711e.js.map"
+    "main.816e6e4c.css.map": "/LearningEnglish/static/css/main.816e6e4c.css.map",
+    "main.b87e1296.js.map": "/LearningEnglish/static/js/main.b87e1296.js.map"
   },
   "entrypoints": [
-    "static/css/main.84e69274.css",
-    "static/js/main.585b711e.js"
+    "static/css/main.816e6e4c.css",
+    "static/js/main.b87e1296.js"
   ]
 }
